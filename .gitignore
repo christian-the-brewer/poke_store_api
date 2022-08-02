@@ -1,2 +1,5 @@
 node_modules
 .env
+REF.md
+app/models/example.js
+app/routes/example_routes.js

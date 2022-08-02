@@ -1,13 +1,17 @@
 {
-  "name": "express-auth-mongoose-boilerplate",
+  "name": "poke-store-api",
   "version": "1.0.0",
-  "description": "Auth boilerplate for mongoose express using token auth",
+  "description": "poke-store-api for mongoose express using token auth",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Timm Schoenborn",
+  "author": [
+    "Christian Brewer",
+    "Jaden Ruplal",
+    "Mahider Mengiste"
+  ],
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
