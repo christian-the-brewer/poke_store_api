@@ -29,7 +29,7 @@ const router = express.Router()
 
 // INDEX
 // GET /pokemon
-router.get('/pokemons', requireToken, (req, res, next) => {
+router.get('/pokemon', (req, res, next) => {
 	Pokemon.find()
 		.then((pokemons) => {
 			// `pokemons` will be an array of Mongoose documents
@@ -45,7 +45,7 @@ router.get('/pokemons', requireToken, (req, res, next) => {
 
 // SHOW
 // GET /pokemons/5a7db6c74d55bc51bdf39793
-router.get('pokemons/:id', requireToken, (req, res, next) => {
+router.get('pokemon/:id', (req, res, next) => {
 	// req.params.id will be set based on the `:id` in the route
 	Pokemon.findById(req.params.id)
 		.then(handle404)
@@ -56,8 +56,8 @@ router.get('pokemons/:id', requireToken, (req, res, next) => {
 })
 
 // CREATE
-// POST /pokemons
-router.post('/pokemons', requireToken, (req, res, next) => {
+// POST /pokemon
+router.post('/pokemon', requireToken, (req, res, next) => {
 	// set owner of new pokemon to be current user
 	// req.body.pokemon.owner = req.user.id
 
@@ -74,7 +74,7 @@ router.post('/pokemons', requireToken, (req, res, next) => {
 
 // UPDATE
 // PATCH /pokemons/5a7db6c74d55bc51bdf39793
-router.patch('/pokemons/:id', requireToken, removeBlanks, (req, res, next) => {
+router.patch('/pokemon/:id', requireToken, removeBlanks, (req, res, next) => {
 	// if the client attempts to change the `owner` property by including a new
 	// owner, prevent that by deleting that key/value pair
 	// delete req.body.pokemon.owner
@@ -97,7 +97,7 @@ router.patch('/pokemons/:id', requireToken, removeBlanks, (req, res, next) => {
 
 // DESTROY
 // DELETE /pokemons/5a7db6c74d55bc51bdf39793
-router.delete('/pokemons/:id', requireToken, (req, res, next) => {
+router.delete('/pokemon/:id', requireToken, (req, res, next) => {
 	Pokemon.findById(req.params.id)
 		.then(handle404)
 		.then((pokemon) => {
