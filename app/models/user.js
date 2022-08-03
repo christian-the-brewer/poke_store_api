@@ -7,11 +7,17 @@ const userSchema = new mongoose.Schema(
 			required: true,
 			unique: true,
 		},
+		name: {
+			type: String,
+			required: true,
+			unique: true,
+		},
 		hashedPassword: {
 			type: String,
 			required: true,
 		},
 		token: String,
+		isAdmin: Boolean
 	},
 	{
 		timestamps: true,
