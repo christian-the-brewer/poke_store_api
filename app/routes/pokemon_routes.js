@@ -44,7 +44,7 @@ router.get('/pokemon', (req, res, next) => {
 })
 
 // SHOW
-// GET /pokemons/5a7db6c74d55bc51bdf39793
+// GET /pokemons/:id
 router.get('pokemon/:id', (req, res, next) => {
 	// req.params.id will be set based on the `:id` in the route
 	Pokemon.findById(req.params.id)
@@ -73,7 +73,7 @@ router.post('/pokemon', requireToken, (req, res, next) => {
 })
 
 // UPDATE
-// PATCH /pokemons/5a7db6c74d55bc51bdf39793
+// PATCH /pokemons/:id
 router.patch('/pokemon/:id', requireToken, removeBlanks, (req, res, next) => {
 	// if the client attempts to change the `owner` property by including a new
 	// owner, prevent that by deleting that key/value pair
@@ -96,7 +96,7 @@ router.patch('/pokemon/:id', requireToken, removeBlanks, (req, res, next) => {
 })
 
 // DESTROY
-// DELETE /pokemons/5a7db6c74d55bc51bdf39793
+// DELETE /pokemons/:id
 router.delete('/pokemon/:id', requireToken, (req, res, next) => {
 	Pokemon.findById(req.params.id)
 		.then(handle404)
