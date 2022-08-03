@@ -39,11 +39,11 @@ mongoose.connect(db, {
     useNewUrlParser: true
 })
     .then(() => {
-        // first we remove all of the motorcycles
+        //delete items
         Item.deleteMany({ owner: null })
             .then(deletedItems => {
                 console.log('deletedItems', deletedItems)
-                // the next step is to use our startMotorcycles array to create our seeded motorcycles
+                // populate with stockPokeMart
                 Item.create(stockPokeMart)
                     .then(newItems => {
                         console.log('the new items', newItems)
