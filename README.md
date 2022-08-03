@@ -1,16 +1,16 @@
-#poke-store-api
+# poke-store-api
 
 An api to serve data for a poke shop
 
-##Prompt
+## Prompt
 
 E-Commerce Store
 
-##Installation
+## Installation
 
-##Structure
+## Structure
 
-##API
+## API
 
 ### Authentication
 
@@ -23,20 +23,20 @@ E-Commerce Store
 
 
 
-##About
+## About
 
-##Roles
+## Roles
 
     -Project Manager: Christian Brewer
     -Front-end SME: Mahider Mengiste
     -Back-end SME: Jaden Ruplal
 
-##ERD
+## ERD
 
 ![ERD](resources/images/erd.png)
 
 
-##API
+## API
 
 https://pokeapi.co/?ref=public-apis
 
