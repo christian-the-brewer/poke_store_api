@@ -19,7 +19,9 @@ const itemSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 		},
-		type: String,
+		pokemonType: {
+			type: String,
+		},
 		stock: {
 			type: Number,
 			required: true,

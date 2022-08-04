@@ -12,7 +12,7 @@ const stockPokeMart = [
         image: 'https://img.pokemondb.net/artwork/avif/bulbasaur.avif',
         cost: 500,
         description: 'Bulbasaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.',
-        type: 'Grass',
+        pokemonType: 'Grass',
         stock: 10
     },
     {
@@ -20,7 +20,7 @@ const stockPokeMart = [
         image: 'https://img.pokemondb.net/artwork/avif/charmander.avif',
         cost: 500,
         description: 'Charmander is a Fire type Pokémon introduced in Generation 1. It is known as the Lizard Pokémon.',
-        type: 'Fire',
+        pokemonType: 'Fire',
         stock: 10
     },
     {
@@ -28,7 +28,7 @@ const stockPokeMart = [
         image: 'https://img.pokemondb.net/artwork/avif/squirtle.avif',
         cost: 500,
         description: 'Squirtle is a Water type Pokémon introduced in Generation 1. It is known as the Tiny Turtle Pokémon.',
-        type: 'Water',
+        pokemonType: 'Water',
         stock: 10
     },
 
