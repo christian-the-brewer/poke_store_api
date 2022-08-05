@@ -8,6 +8,14 @@ const db = require('../../config/db')
 
 const stockPokeMart = [
     {
+        name: 'Pikachu',
+        image: 'https://img.pokemondb.net/artwork/avif/pikachu.avif',
+        cost: 5000000,
+        description: 'Pikachu is an Electric type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.',
+        pokemonType: 'Electric',
+        stock: 1
+    },
+    {
         name: 'Bulbasaur',
         image: 'https://img.pokemondb.net/artwork/avif/bulbasaur.avif',
         cost: 500,
@@ -113,6 +121,265 @@ const stockPokeMart = [
         pokemonType: 'Grass',
         stock: 10
     },
+    {
+        name: 'Caterpie',
+        image: 'https://img.pokemondb.net/artwork/avif/caterpie.avif',
+        cost: 350,
+        description: 'Caterpie is a Bug type Pokémon introduced in Generation 1. It is known as the Worm Pokémon.',
+        pokemonType: 'Bug',
+        stock: 10
+    },
+    {
+        name: 'Metapod',
+        image: 'https://img.pokemondb.net/artwork/avif/metapod.avif',
+        cost: 900,
+        description: 'Metapod is a Bug type Pokémon introduced in Generation 1. It is known as the Cocoon Pokémon.',
+        pokemonType: 'Bug',
+        stock: 3
+    },
+    {
+        name: 'Nidorina',
+        image: 'https://img.pokemondb.net/artwork/avif/nidorina.avif',
+        cost: 90,
+        description: 'Nidorina is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Pin Pokémon.',
+        pokemonType: 'Poison',
+        stock: 33
+    },
+    {
+        name: 'Butterfree',
+        image: 'https://img.pokemondb.net/artwork/avif/butterfree.avif',
+        cost: 200,
+        description: 'Butterfree is a Bug/Flying type Pokémon introduced in Generation 1. It is known as the Butterfly Pokémon.',
+        pokemonType: 'Flying',
+        stock: 5
+    },
+    {
+        name: 'Weedle',
+        image: 'https://img.pokemondb.net/artwork/avif/weedle.avif',
+        cost: 280,
+        description: 'Weedle is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Hairy Bug Pokémon.',
+        pokemonType: 'Bug',
+        stock: 15
+    },
+    {
+        name: 'Kakuna',
+        image: 'https://img.pokemondb.net/artwork/avif/kakuna.avif',
+        cost: 300,
+        description: 'Kakuna is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Cocoon Pokémon.',
+        pokemonType: 'Bug',
+        stock: 8
+    },
+    {
+        name: 'Beedrill',
+        image: 'https://img.pokemondb.net/artwork/avif/beedrill.avif',
+        cost: 55,
+        description: 'Beedrill is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Poison Bee Pokémon.',
+        pokemonType: 'Poison',
+        stock: 30
+    },
+    {
+        name: 'Pidgey',
+        image: 'https://img.pokemondb.net/artwork/avif/pidgey.avif',
+        cost: 99,
+        description: 'Pidgey is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Tiny Bird Pokémon.',
+        pokemonType: 'Normal',
+        stock: 22
+    },
+    {
+        name: 'Rattata',
+        image: 'https://img.pokemondb.net/artwork/avif/rattata.avif',
+        cost: 5,
+        description: 'Rattata is a Normal type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.',
+        pokemonType: 'Normal',
+        stock: 15008
+    },
+    {
+        name: 'Spearow',
+        image: 'https://img.pokemondb.net/artwork/avif/spearow.avif',
+        cost: 400,
+        description: 'Spearow is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Tiny Bird Pokémon.',
+        pokemonType: 'Normal',
+        stock: 150
+    },
+    {
+        name: 'Fearow',
+        image: 'https://img.pokemondb.net/artwork/avif/fearow.avif',
+        cost: 75,
+        description: 'Fearow is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Beak Pokémon.',
+        pokemonType: 'Flying',
+        stock: 69
+    },
+    {
+        name: 'Ekans',
+        image: 'https://img.pokemondb.net/artwork/avif/ekans.avif',
+        cost: 375,
+        description: 'Ekans is a Poison type Pokémon introduced in Generation 1. It is known as the Snake Pokémon.',
+        pokemonType: 'Poison',
+        stock: 5
+    },
+    {
+        name: 'Arbok',
+        image: 'https://img.pokemondb.net/artwork/avif/ekans.avif',
+        cost: 200,
+        description: 'Arbok is a Poison type Pokémon introduced in Generation 1. It is known as the Cobra Pokémon.',
+        pokemonType: 'Poison',
+        stock: 11
+    },
+    {
+        name: 'Raichu',
+        image: 'https://img.pokemondb.net/artwork/avif/raichu.avif',
+        cost: 2500,
+        description: 'Raichu is an Electric type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.',
+        pokemonType: 'Electric',
+        stock: 2
+    },
+    {
+        name: 'Sandshrew',
+        image: 'https://img.pokemondb.net/artwork/avif/sandshrew.avif',
+        cost: 420,
+        description: 'Sandshrew is a Ground type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.',
+        pokemonType: 'Ground',
+        stock: 6
+    },
+    {
+        name: 'Sandslash',
+        image: 'https://img.pokemondb.net/artwork/avif/sandslash.avif',
+        cost: 355,
+        description: 'Sandslash is a Ground type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.',
+        pokemonType: 'Ground',
+        stock: 88
+    },
+    {
+        name: 'Clefairy',
+        image: 'https://img.pokemondb.net/artwork/avif/clefable.avif',
+        cost: 660,
+        description: 'Clefairy is a Fairy type Pokémon introduced in Generation 1. It is known as the Fairy Pokémon.',
+        pokemonType: 'Fairy',
+        stock: 7
+    },
+    {
+        name: 'Vulpix',
+        image: 'https://img.pokemondb.net/artwork/avif/vulpix.avif',
+        cost: 480,
+        description: 'Vulpix is a Fire type Pokémon introduced in Generation 1. It is known as the Fox Pokémon.',
+        pokemonType: 'Fire',
+        stock: 8
+    },
+    {
+        name: 'Ninetales',
+        image: 'https://img.pokemondb.net/artwork/avif/ninetales.avif',
+        cost: 1000,
+        description: 'Ninetales is a Fire type Pokémon introduced in Generation 1. It is known as the Fox Pokémon.',
+        pokemonType: 'Fire',
+        stock: 10
+    },
+    {
+        name: 'Jigglypuff',
+        image: 'https://img.pokemondb.net/artwork/avif/jigglypuff.avif',
+        cost: 100,
+        description: 'Jigglypuff is a Normal/Fairy type Pokémon introduced in Generation 1. It is known as the Balloon Pokémon.',
+        pokemonType: 'Fairy',
+        stock: 100
+    },
+    {
+        name: 'Zubat',
+        image: 'https://img.pokemondb.net/artwork/avif/zubat.avif',
+        cost: 10,
+        description: 'Zubat is a Poison/Flying type Pokémon introduced in Generation 1. It is known as the Bat Pokémon.',
+        pokemonType: 'Poison',
+        stock: 100000
+    },
+    {
+        name: 'Oddish',
+        image: 'https://img.pokemondb.net/artwork/avif/oddish.avif',
+        cost: 150,
+        description: 'Zubat is a Poison/Flying type Pokémon introduced in Generation 1. It is known as the Bat Pokémon.',
+        pokemonType: 'Grass',
+        stock: 100
+    },
+    {
+        name: 'Gloom',
+        image: 'https://img.pokemondb.net/artwork/avif/gloom.avif',
+        cost: 15,
+        description: 'Gloom is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Weed Pokémon.',
+        pokemonType: 'Grass',
+        stock: 10000
+    },
+    {
+        name: 'Vileplume',
+        image: 'https://img.pokemondb.net/artwork/avif/vileplume.avif',
+        cost: 340,
+        description: 'Vileplume is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Flower Pokémon.',
+        pokemonType: 'Grass',
+        stock: 23
+    },
+    {
+        name: 'Paras',
+        image: 'https://img.pokemondb.net/artwork/avif/vileplume.avif',
+        cost: 3,
+        description: 'Paras is a Bug/Grass type Pokémon introduced in Generation 1. It is known as the Mushroom Pokémon.',
+        pokemonType: 'Bug',
+        stock: 2300
+    },
+    {
+        name: 'Venonat',
+        image: 'https://img.pokemondb.net/artwork/avif/venonat.avif',
+        cost: 300,
+        description: 'Venonat is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Insect Pokémon.',
+        pokemonType: 'Bug',
+        stock: 10
+    },
+    {
+        name: 'Diglett',
+        image: 'https://img.pokemondb.net/artwork/avif/diglett.avif',
+        cost: 300000,
+        description: 'Diglett is a Ground type Pokémon introduced in Generation 1. It is known as the Mole Pokémon.',
+        pokemonType: 'Ground',
+        stock: 3
+    },
+    {
+        name: 'Meowth',
+        image: 'https://img.pokemondb.net/artwork/avif/meowth.avif',
+        cost: 3000,
+        description: 'Meowth is a Normal type Pokémon introduced in Generation 1. It is known as the Scratch Cat Pokémon.',
+        pokemonType: 'Normal',
+        stock: 5
+    },
+    {
+        name: 'Psyduck',
+        image: 'https://img.pokemondb.net/artwork/avif/meowth.avif',
+        cost: 30,
+        description: 'Psyduck is a Water type Pokémon introduced in Generation 1. It is known as the Duck Pokémon.',
+        pokemonType: 'Water',
+        stock: 50
+    },
+    {
+        name: 'Mankey',
+        image: 'https://img.pokemondb.net/artwork/avif/mankey.avif',
+        cost: 2500,
+        description: 'Mankey is a Fighting type Pokémon introduced in Generation 1. It is known as the Pig Monkey Pokémon.',
+        pokemonType: 'Fighting',
+        stock: 5
+    },
+    {
+        name: 'Growlithe',
+        image: 'https://img.pokemondb.net/artwork/avif/growlithe.avif',
+        cost: 250,
+        description: 'Growlithe is a Fire type Pokémon introduced in Generation 1. It is known as the Puppy Pokémon.',
+        pokemonType: 'Fire',
+        stock: 24
+    },
+    {
+        name: 'Poliwag',
+        image: 'https://img.pokemondb.net/artwork/avif/poliwag.avif',
+        cost: 20,
+        description: 'Poliwag is a Water type Pokémon introduced in Generation 1. It is known as the Tadpole Pokémon.',
+        pokemonType: 'Water',
+        stock: 100
+    },
+
+
+
 
 ]
 
