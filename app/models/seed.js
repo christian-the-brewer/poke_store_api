@@ -66,12 +66,12 @@ const stockPokeMart = [
         stock: 10
     },
     {
-        name: 'Wartortle',
-        image: 'https://img.pokemondb.net/artwork/avif/wartortle.avif',
-        cost: 500,
-        description: 'Wartortle is a Water type Pokémon introduced in Generation 1. It is known as the Turtle Pokémon.',
-        pokemonType: 'Water',
-        stock: 10
+        name: 'Charizard',
+        image: 'https://img.pokemondb.net/artwork/avif/charizard.avif',
+        cost: 300,
+        description: 'Charizard is a Fire/Flying type Pokémon introduced in Generation 1. It is known as the Flame Pokémon.',
+        pokemonType: 'Fire',
+        stock: 12
     },
     {
         name: 'Blastoise',
@@ -105,7 +105,7 @@ const stockPokeMart = [
         pokemonType: 'Grass',
         stock: 10
     },
-     {
+    {
         name: 'Paras',
         image: 'https://img.pokemondb.net/artwork/avif/paras.avif',
         cost: 400,
