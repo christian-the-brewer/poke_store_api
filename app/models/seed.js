@@ -219,7 +219,7 @@ const stockPokeMart = [
     },
     {
         name: 'Arbok',
-        image: 'https://img.pokemondb.net/artwork/avif/ekans.avif',
+        image: 'https://img.pokemondb.net/artwork/avif/arbok.avif',
         cost: 200,
         description: 'Arbok is a Poison type Pokémon introduced in Generation 1. It is known as the Cobra Pokémon.',
         pokemonType: 'Poison',
@@ -315,7 +315,7 @@ const stockPokeMart = [
     },
     {
         name: 'Paras',
-        image: 'https://img.pokemondb.net/artwork/avif/vileplume.avif',
+        image: 'https://img.pokemondb.net/artwork/avif/paras.avif',
         cost: 3,
         description: 'Paras is a Bug/Grass type Pokémon introduced in Generation 1. It is known as the Mushroom Pokémon.',
         pokemonType: 'Bug',
@@ -347,7 +347,7 @@ const stockPokeMart = [
     },
     {
         name: 'Psyduck',
-        image: 'https://img.pokemondb.net/artwork/avif/meowth.avif',
+        image: 'https://img.pokemondb.net/artwork/avif/psyduck.avif',
         cost: 30,
         description: 'Psyduck is a Water type Pokémon introduced in Generation 1. It is known as the Duck Pokémon.',
         pokemonType: 'Water',
