@@ -5,7 +5,8 @@ const cartSchema = new mongoose.Schema(
 		products:[ {
             name: String,
             price: Number,
-            quantity: Number
+            quantity: Number,
+			active: Boolean
         } ],
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
