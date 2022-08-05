@@ -1,7 +1,7 @@
 //item model from poke api
 const mongoose = require('mongoose')
-
-const itemSchema = new mongoose.Schema(
+const { Schema, model } = mongoose
+const itemSchema = new Schema(
 	{
 		name: {
 			type: String,
@@ -32,4 +32,4 @@ const itemSchema = new mongoose.Schema(
 	}
 )
 
-module.exports = mongoose.model('Item', itemSchema)
+module.exports = model('Item', itemSchema)
