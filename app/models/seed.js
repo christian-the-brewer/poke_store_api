@@ -378,9 +378,6 @@ const stockPokeMart = [
         stock: 100
     },
 
-
-
-
 ]
 
 //connect to database
