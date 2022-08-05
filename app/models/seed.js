@@ -16,6 +16,23 @@ const stockPokeMart = [
         stock: 10
     },
     {
+        name: 'Ivysaur',
+        image: 'https://img.pokemondb.net/artwork/avif/ivysaur.avif',
+        cost: 100,
+        description:'Ivysaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.',
+        pokemonType: 'Grass',
+        stock: 12
+    },
+    {
+        name: 'Venusaur',
+        image: 'https://img.pokemondb.net/artwork/avif/venusaur.avif',
+        cost: 300,
+        description:'Venusaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.',
+        pokemonType: 'Grass',
+        stock: 12
+    },
+
+    {
         name: 'Charmander',
         image: 'https://img.pokemondb.net/artwork/avif/charmander.avif',
         cost: 500,
@@ -24,11 +41,76 @@ const stockPokeMart = [
         stock: 10
     },
     {
+        name: 'Charmeleon',
+        image: 'https://img.pokemondb.net/artwork/avif/charmeleon.avif',
+        cost: 400,
+        description: 'Charmeleon is a Fire type Pokémon introduced in Generation 1. It is known as the Flame Pokémon.',
+        pokemonType: 'Fire',
+        stock: 10
+    },
+
+    {
         name: 'Squirtle',
         image: 'https://img.pokemondb.net/artwork/avif/squirtle.avif',
         cost: 500,
         description: 'Squirtle is a Water type Pokémon introduced in Generation 1. It is known as the Tiny Turtle Pokémon.',
         pokemonType: 'Water',
+        stock: 10
+    },
+    {
+        name: 'Wartortle',
+        image: 'https://img.pokemondb.net/artwork/avif/wartortle.avif',
+        cost: 500,
+        description: 'Wartortle is a Water type Pokémon introduced in Generation 1. It is known as the Turtle Pokémon.',
+        pokemonType: 'Water',
+        stock: 10
+    },
+    {
+        name: 'Wartortle',
+        image: 'https://img.pokemondb.net/artwork/avif/wartortle.avif',
+        cost: 500,
+        description: 'Wartortle is a Water type Pokémon introduced in Generation 1. It is known as the Turtle Pokémon.',
+        pokemonType: 'Water',
+        stock: 10
+    },
+    {
+        name: 'Blastoise',
+        image: 'https://img.pokemondb.net/artwork/avif/blastoise.avif',
+        cost: 900,
+        description: 'Blastoise is a Water type Pokémon introduced in Generation 1. It is known as the Shellfish Pokémon.',
+        pokemonType: 'Water',
+        stock: 40
+    },
+    {
+        name: 'Ninetales',
+        image: 'https://img.pokemondb.net/artwork/avif/ninetales.avif',
+        cost: 200,
+        description: 'Ninetales is a Fire type Pokémon introduced in Generation 1. It is known as the Fox Pokémon.',
+        pokemonType: 'Fire',
+        stock: 30
+    },
+    {
+        name: 'Gloom',
+        image: 'https://img.pokemondb.net/artwork/avif/gloom.avif',
+        cost: 100,
+        description: 'Gloom is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Weed Pokémon.',
+        pokemonType: 'Grass',
+        stock: 10
+    },
+    {
+        name: 'Vileplume',
+        image: 'https://img.pokemondb.net/artwork/avif/vileplume.avif',
+        cost: 200,
+        description: 'Vileplume is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Flower Pokémon.',
+        pokemonType: 'Grass',
+        stock: 10
+    },
+     {
+        name: 'Paras',
+        image: 'https://img.pokemondb.net/artwork/avif/paras.avif',
+        cost: 400,
+        description: 'Paras is a Bug/Grass type Pokémon introduced in Generation 1. It is known as the Mushroom Pokémon.',
+        pokemonType: 'Grass',
         stock: 10
     },
 
