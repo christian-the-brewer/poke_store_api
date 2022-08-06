@@ -377,6 +377,47 @@ const stockPokeMart = [
         pokemonType: 'Water',
         stock: 100
     },
+    {
+        name: 'Pokeball',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ8QjdVpljuDTt9XhGJj01auA6g3AwgeFX3WGSu55wwYZvaFJ1qd0_0WjWw9IKEC7F8M4&usqp=CAU',
+        cost: 2,
+        description: 'A device for catching wild Pokémon. It is thrown like a ball at the target. It is designed as a capsule system.',
+        pokemonType: 'Pokeball',
+        stock: 10000000
+    },
+    {
+        name: 'Babiri Berry',
+        image: 'https://i.imgur.com/441dssJ.png',
+        cost: 20,
+        description: 'Weakens a supereffective Steel-type attack against the holding Pokémon.',
+        pokemonType: 'Berries',
+        stock: 100
+    },
+    {
+        name: 'Kebia Berry',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Y3Md-urXq32lbcbZKcbEOb5lvTQHRD7h3A&usqp=CAU',
+        cost: 5,
+        description: 'Weakens a supereffective Poison-type attack against the holding Pokémon.',
+        pokemonType: 'Berries',
+        stock: 10
+    },
+    {
+        name: 'Big Pearl',
+        image: 'https://i.imgur.com/G6ySPT7.png',
+        cost: 50000,
+        description: 'A quite-large pearl that sparkles in a pretty silver color. It can be sold at a high price to shops.',
+        pokemonType: 'General',
+        stock: 6
+    },
+    {
+        name: 'Big Mushroom',
+        image: 'https://i.imgur.com/S4tdriw.png',
+        cost: 250000,
+        description: 'A large and rare mushroom. It is sought after by collectors.',
+        pokemonType: 'General',
+        stock: 2
+    },
+
 
 ]
 
