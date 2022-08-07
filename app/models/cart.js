@@ -2,12 +2,12 @@ const mongoose = require('mongoose')
 
 const cartSchema = new mongoose.Schema(
 	{
-		products:[ {
-            name: String,
-            price: Number,
-            quantity: Number,
-			active: Boolean
-        } ],
+		products: [{
+			name: String,
+			price: Number,
+			quantity: Number,
+		}],
+		active: Boolean,
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',

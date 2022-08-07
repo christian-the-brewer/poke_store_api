@@ -47,7 +47,7 @@ router.get('/carts', requireToken, (req, res, next) => {
 // GET /carts/:id
 router.get('/carts/:id', requireToken, (req, res, next) => {
 	// req.params.id will be set based on the `:id` in the rout
-    Cart.findById(req.params.id)
+	Cart.findById(req.params.id)
 		.then(handle404)
 		// if `findById` is succesful, respond with 200 and "cart" JSON
 		.then((cart) => res.status(200).json({ cart: cart.toObject() }))
@@ -107,6 +107,58 @@ router.delete('/carts/:id', requireToken, (req, res, next) => {
 			cart.deleteOne()
 		})
 		// send back 204 and no content if the deletion succeeded
+		.then(() => res.sendStatus(204))
+		// if an error occurs, pass it to the handler
+		.catch(next)
+})
+
+//Add to cart
+router.post('/carts', requireToken, (req, res, nexcart) => {
+	// set owner of new cart to be current user
+	req.body.cart.owner = req.user.id
+	//if statement to check if the user has an ACTIVE cart
+	//If they do have one, we simply add item to the cart
+	//If they do not, we want to make one, and then add item to the cart
+	if ((Cart.find({ $and: [{ active: true }, { owner: req.user.id }] }))) {
+
+
+	} else {
+		Cart.create(req.body.cart)
+			// respond to succesful `create` with status 201 and JSON of new "cart"
+			.then((cart) => {
+				res.status(201).json({ cart: cart.toObject() })
+			})
+			// if an error occurs, pass it off to our error handler
+			// the error handler needs the error message and the `res` object so that it
+			// can send an error message back to the client
+			.catch(next)
+	}
+
+
+})
+
+
+
+
+//Checkout Route
+router.patch('/carts/:id', requireToken, removeBlanks, (req, res, next) => {
+	// if the client attempts to change the `owner` property by including a new
+	// owner, prevent that by deleting that key/value pair
+	delete req.body.cart.owner
+
+	Cart.findById(req.params.id)
+		.then(handle404)
+		.then((cart) => {
+			// pass the `req` object and the Mongoose record to `requireOwnership`
+			// it will throw an error if the current user isn't the owner
+			requireOwnership(req, cart)
+
+			// pass the result of Mongoose's `.update` to the next `.then`
+			Cart.updateOne({ _id: req.params.id }, { $set: { active: false } })
+		})
+
+
+		// if that succeeded, return 204 and no JSON
 		.then(() => res.sendStatus(204))
 		// if an error occurs, pass it to the handler
 		.catch(next)
