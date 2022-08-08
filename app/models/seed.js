@@ -417,6 +417,22 @@ const stockPokeMart = [
         pokemonType: 'General',
         stock: 2
     },
+    {
+        name: 'Cheri Berry',
+        image: 'https://i.imgur.com/l4XyM8Y.png',
+        cost: 25,
+        description: 'If held by a Pokémon, it recovers from paralysis.',
+        pokemonType: 'Berries',
+        stock: 20
+    },
+    {
+        name: 'Grepa Berry',
+        image: 'https://archives.bulbagarden.net/media/upload/0/00/Dream_Grepa_Berry_Sprite.png',
+        cost: 4,
+        description: 'Increases Friendship but lowers Special Defense EVs.',
+        pokemonType: 'Berries',
+        stock: 2245
+    },
 
 
 ]
