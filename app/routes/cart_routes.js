@@ -113,14 +113,24 @@ router.delete('/carts/:id', requireToken, (req, res, next) => {
 })
 
 //Add to cart
-router.post('/carts', requireToken, (req, res, nexcart) => {
+router.patch('/carts/add/:id', requireToken, (req, res, nexcart) => {
 	// set owner of new cart to be current user
 	req.body.cart.owner = req.user.id
+
 	//if statement to check if the user has an ACTIVE cart
 	//If they do have one, we simply add item to the cart
 	//If they do not, we want to make one, and then add item to the cart
 	if ((Cart.find({ $and: [{ active: true }, { owner: req.user.id }] }))) {
-
+		//here we add the item info the cart
+		Cart.findById(req.params.id)
+			.then(handle404)
+			.then(cart => {
+				cart.products.push(req.body.product)
+			})
+			// if that succeeded, return 204 and no JSON
+			.then(() => res.sendStatus(204))
+			// if an error occurs, pass it to the handler
+			.catch(next)
 
 	} else {
 		Cart.create(req.body.cart)
