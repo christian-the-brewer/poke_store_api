@@ -78,7 +78,7 @@ app.use(orderRoutes)
 app.use(errorHandler)
 
 // run API on designated port (4741 in this case)
-app.listen(port, () => {
+app.listen(port || 3000, () => {
 	console.log('listening on port ' + port)
 })
 
