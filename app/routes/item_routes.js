@@ -76,6 +76,10 @@ router.post('/items', requireToken, (req, res, next) => {
 		.catch(next)
 })
 
+
+
+
+
 // UPDATE
 // PATCH /items/:id
 router.patch('/items/:id', requireToken, removeBlanks, (req, res, next) => {
@@ -100,6 +104,23 @@ router.patch('/items/:id', requireToken, removeBlanks, (req, res, next) => {
 		// if an error occurs, pass it to the handler
 		.catch(next)
 })
+
+
+//UPDATE
+//PATCH /items/:id/stock
+router.patch('/items/stock/:id', removeBlanks, (req, res, next) => {
+	console.log("this is req.body", req.body)
+	console.log("this is req.params.id", req.params.id)
+	console.log('updating')
+
+	Item.updateOne({_id: req.params.id}, {$inc: {stock: -1 }})
+		.then(handle404)
+		// if that succeeded, return 204 and no JSON
+		.then(() => res.sendStatus(204))
+		// if an error occurs, pass it to the handler
+		.catch(next)
+})
+//
 
 // DESTROY
 // DELETE /items/:id
