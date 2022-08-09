@@ -29,23 +29,24 @@ const router = express.Router()
 
 // INDEX
 // GET /carts
-router.get('/carts', requireToken, (req, res, next) => {
-	Cart.find()
-		.then((carts) => {
-			// `carts` will be an array of Mongoose documents
-			// we want to convert each one to a POJO, so we use `.map` to
-			// apply `.toObject` to each one
-			return carts.map((cart) => cart.toObject())
-		})
-		// respond with status 200 and JSON of the carts
-		.then((carts) => res.status(200).json({ carts: carts }))
-		// if an error occurs, pass it to the handler
-		.catch(next)
-})
+// router.get('/carts',  (req, res, next) => {
+// 	Cart.find()
+// 		.then((carts) => {
+// 			// `carts` will be an array of Mongoose documents
+// 			// we want to convert each one to a POJO, so we use `.map` to
+// 			// apply `.toObject` to each one
+// 			return carts.map((cart) => cart.toObject())
+// 		})
+// 		// respond with status 200 and JSON of the carts
+// 		.then((carts) => res.status(200).json({ carts: carts }))
+// 		// if an error occurs, pass it to the handler
+// 		.catch(next)
+// })
 
 // SHOW
 // GET /carts
 router.get('/carts', requireToken, (req, res, next) => {
+	console.log('this is user', req.user)
 	// req.params.id will be set based on the `:id` in the rout
 	Cart.findOne({ $and: [{ active: true }, { owner: req.user.id }] }, async function (error, cart) {
 		res.status(200).json({ cart: cart.toObject() })

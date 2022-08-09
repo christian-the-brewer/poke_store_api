@@ -4,7 +4,7 @@ const cartSchema = new mongoose.Schema(
 	{
 		products: [{
 			name: String,
-			price: Number,
+			cost: Number,
 			quantity: Number,
 		}],
 		active: Boolean,
