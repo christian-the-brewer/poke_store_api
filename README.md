@@ -20,6 +20,17 @@ E-Commerce Store
 | POST   | `/sign-in`             | `users#signin`    |
 | PATCH  | `/change-password/` | `users#changepw`  |
 | DELETE | `/sign-out/`        | `users#signout`   |
+| POST   | `/items`  | `item#create`  |
+| GET   | `/items`  | `get#item`  |
+| GET   | `/items/:id`  | `get#item.id`  |
+| PATCH  | `/items/:id` | `item#update`  |
+| PATCH  | `/items/:id/stock` | `update#itemStock`  |
+| DELETE  | `items/:id`  | `item#delete.` |
+| GET   | `/carts`  | `get#cart`  |
+| POST   | `/carts`  | `create#cart`  |
+
+
+
 
 
 
