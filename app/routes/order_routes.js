@@ -30,7 +30,7 @@ const router = express.Router()
 // INDEX
 // GET /orders
 router.get('/orders', requireToken, (req, res, next) => {
-	Cart.find({ owner: req.user.id })
+	Cart.find({$and: [ {owner: req.user.id}, {active: false} ]  })
 		.then((carts) => {
 			// `carts` will be an array of Mongoose documents
 			// we want to convert each one to a POJO, so we use `.map` to
@@ -45,15 +45,15 @@ router.get('/orders', requireToken, (req, res, next) => {
 
 // SHOW
 // GET /order/:id
-router.get('orders/:id', requireToken, (req, res, next) => {
-	// req.params.id will be set based on the `:id` in the route
-	Cart.findById(req.params.id)
-		.then(handle404)
-		// if `findById` is succesful, respond with 200 and "cart" JSON
-		.then((cart) => res.status(200).json({ cart: cart.toObject() }))
-		// if an error occurs, pass it to the handler
-		.catch(next)
-})
+// router.get('orders/:id', requireToken, (req, res, next) => {
+// 	// req.params.id will be set based on the `:id` in the route
+// 	Cart.findById(req.params.id)
+// 		.then(handle404)
+// 		// if `findById` is succesful, respond with 200 and "cart" JSON
+// 		.then((cart) => res.status(200).json({ cart: cart.toObject() }))
+// 		// if an error occurs, pass it to the handler
+// 		.catch(next)
+// })
 
 // // CREATE
 // // POST /pokemon
