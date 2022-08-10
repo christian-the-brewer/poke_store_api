@@ -116,7 +116,7 @@ router.delete('/carts/:id', requireToken, (req, res, next) => {
 })
 
 //Add to cart
-router.post('/carts/add/', requireToken, async (req, res, nexcart) => {
+router.post('/carts/add', requireToken, async (req, res, nexcart) => {
 	// // set owner of new cart to be current user
 	// req.body.cart.owner = req.user.id
 	const shoppingCart = Cart.findOne
@@ -178,20 +178,19 @@ router.post('/carts/add/', requireToken, async (req, res, nexcart) => {
 
 
 //Checkout Route
-router.patch('/carts/:id', requireToken, removeBlanks, (req, res, next) => {
+router.post('/carts/checkout/:id', requireToken, removeBlanks, (req, res, next) => {
 	// if the client attempts to change the `owner` property by including a new
 	// owner, prevent that by deleting that key/value pair
-	delete req.body.cart.owner
+	// delete req.body.cart.owner
 
-	Cart.findById(req.params.id)
+	Cart.updateOne({ _id: req.params.id }, { $set: { active: false } })
 		.then(handle404)
 		.then((cart) => {
-			// pass the `req` object and the Mongoose record to `requireOwnership`
-			// it will throw an error if the current user isn't the owner
-			requireOwnership(req, cart)
+			const newCart = new Cart()
+			newCart.active = true
+			newCart.owner = req.user.id
+			newCart.save()
 
-			// pass the result of Mongoose's `.update` to the next `.then`
-			Cart.updateOne({ _id: req.params.id }, { $set: { active: false } })
 		})
 
 
