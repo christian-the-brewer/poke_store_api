@@ -200,5 +200,24 @@ router.post('/carts/checkout/:id', requireToken, removeBlanks, (req, res, next) 
 		.catch(next)
 })
 
+//remove item from cart
+//Checkout Route
+router.patch('/carts/edit/:id', requireToken, removeBlanks, (req, res, next) => {
+	// if the client attempts to change the `owner` property by including a new
+	// owner, prevent that by deleting that key/value pair
+	// delete req.body.cart.owner
+
+	Cart.findOneAndUpdate({ _id: req.params.id }, { $pull: { "products": req.body.itemId._id } }, { returnDocument: "after" })
+		.then(handle404)
+		.then((cart) => {
+		})
+
+
+		// if that succeeded, return 204 and no JSON
+		.then(() => res.sendStatus(204))
+		// if an error occurs, pass it to the handler
+		.catch(next)
+})
+
 module.exports = router
 
