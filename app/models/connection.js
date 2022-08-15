@@ -1,4 +1,6 @@
+require('dotenv').config()
 const mongoose = require('mongoose');
+
 
 // Fire off the connection to Mongo DB
 mongoose.connect(process.env.MONGODB_URI, {
@@ -14,3 +16,5 @@ mongoose.connection.on('connected', () => {
 mongoose.connection.on("error", (err) => {
     console.log("Could not connect to MongoDB!", err);
 });
+
+module.exports = mongoose

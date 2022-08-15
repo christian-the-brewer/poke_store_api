@@ -2,7 +2,7 @@
 //deletes current databse and and replaces with only what is in seed database
 //TODO make it so it only deletes bikes without owner
 
-const mongoose = require('mongoose')
+const mongoose = require('./connection')
 const Item = require('./item')
 const db = require('../../config/db')
 
@@ -27,7 +27,7 @@ const stockPokeMart = [
         name: 'Ivysaur',
         image: 'https://img.pokemondb.net/artwork/avif/ivysaur.avif',
         cost: 100,
-        description:'Ivysaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.',
+        description: 'Ivysaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.',
         pokemonType: 'Grass',
         stock: 12
     },
@@ -35,7 +35,7 @@ const stockPokeMart = [
         name: 'Venusaur',
         image: 'https://img.pokemondb.net/artwork/avif/venusaur.avif',
         cost: 300,
-        description:'Venusaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.',
+        description: 'Venusaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.',
         pokemonType: 'Grass',
         stock: 12
     },

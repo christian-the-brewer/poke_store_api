@@ -1,5 +1,5 @@
 //item model from poke api
-const mongoose = require('mongoose')
+const mongoose = require('./connection')
 const { Schema, model } = mongoose
 const itemSchema = new Schema(
 	{
