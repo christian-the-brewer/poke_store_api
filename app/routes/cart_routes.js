@@ -207,8 +207,9 @@ router.patch('/carts/edit/:id', requireToken, removeBlanks, (req, res, next) => 
 	// owner, prevent that by deleting that key/value pair
 	// delete req.body.cart.owner
 
-	Cart.findOneAndUpdate({ _id: req.params.id }, { $pull: { "products": req.body.itemId._id } }, { returnDocument: "after" })
-		.then(handle404)
+	Cart.findOneAndUpdate({ _id: req.params.id }, { "$pull": { "products": { "_id": req.body.itemId._id } } })
+		.then(handle404, console.log("This is req.body.itemId._id", req.body.itemId._id))
+
 		.then((cart) => {
 		})
 
